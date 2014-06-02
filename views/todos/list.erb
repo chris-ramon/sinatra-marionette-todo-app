@@ -1,0 +1,7 @@
+<ul>
+    <% @todos.each do |todo| %>
+        <li>
+            <a href="/todos/<%= todo.id %>"><%= todo.text %></a> - <%= todo.status %>
+        </li>
+    <% end %>
+</ul>
