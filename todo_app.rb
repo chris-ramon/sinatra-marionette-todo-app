@@ -2,6 +2,9 @@ require 'sinatra/base'
 require './models/todo'
 
 class TodoApp < Sinatra::Base
+  url = ENV['REDISTOGO_URL'] || 'http://127.0.0.1:6379'
+  Ohm.connect(url: url)
+
   get '/' do
     redirect '/todos'
   end
