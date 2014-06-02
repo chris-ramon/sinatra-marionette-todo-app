@@ -57,6 +57,4 @@ class TodoApp < Sinatra::Base
       # not found
     end
   end
-
-  run!
 end
